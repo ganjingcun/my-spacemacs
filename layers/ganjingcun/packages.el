@@ -32,6 +32,10 @@
 (defconst ganjingcun-packages
   '(youdao-dictionary
     company
+    php-mode
+    scala-mode
+    web-mode
+    js2-mode
     )
   )
 
@@ -46,10 +50,31 @@
 (defun ganjingcun/post-init-company()
   (setq company-minimum-prefix-length 1))
 
-
-(defun ganjingcun/post-init-js2-mode ()
-  (use-package js2-modey
+(defun ganjingcun/init-php-mode()
+  (use-package php-mode
     :defer t
     :init
     )
   )
+
+(defun ganjingcun/init-scala-mode()
+  (use-package scala-mode
+    :defer t
+    :init
+    )
+  )
+
+(defun ganjingcun/init-web-mode()
+  (use-package web-mode
+    :defer t
+    :init
+    )
+  )
+
+(defun ganjingcun/init-js2-mode()
+  (use-package js2-mode
+    :defer t
+    :init
+    )
+  )
+
